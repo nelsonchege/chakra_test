@@ -10,9 +10,9 @@ import {
 import React from "react";
 
 function Navbar() {
-  const bgcolors = ["red", "blue", "green", "yellow"];
+  
   return (
-    <Flex as="nav" p={"10px"} alignItems={"center"}>
+    <Flex as="nav" p={"40px"} alignItems={"center"}>
       <Heading as={"h1"}>Dojo Tasks</Heading>
       <Spacer />
       <HStack spacing={"15px"}>
@@ -22,11 +22,6 @@ function Navbar() {
         <Text>test@gmail.com</Text>
         <Button colorScheme="purple">Logout</Button>
       </HStack>
-      {/* {bgcolors.map((color, index) => (
-        <Box key={index + color} w={"150px"} h={"50px"} bg={color}>
-          {index + 1}
-        </Box>
-      ))} */}
     </Flex>
   );
 }
