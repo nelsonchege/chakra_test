@@ -1,10 +1,9 @@
 import { AtSignIcon, CalendarIcon, EditIcon } from "@chakra-ui/icons";
 import { List, ListIcon, ListItem } from "@chakra-ui/react";
 import React from "react";
-import { NavLink, useLoaderData } from "react-router-dom";
+import { NavLink} from "react-router-dom";
 
 export default function Sidebar() {
-  const tasks = useLoaderData();
   return (
     <List color={"white"} fontSize={"1.2em"} spacing={4}>
       <ListItem>
@@ -23,9 +22,3 @@ export default function Sidebar() {
   );
 }
 
-export const taskLoader = async () => {
-  await fetch("http://localhost:3000/tasks").then((res) => {
-    console.log(res.json());
-    return res.json();
-  });
-};
